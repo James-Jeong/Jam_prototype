@@ -1,0 +1,17 @@
+SubDir TOP src test1 ;
+
+SRCS =
+	proxy
+	pipe
+	transc
+	jpool
+	dlist_int
+	dlist_ptr
+	;
+
+SYS_CINCLUDE += -I$(TEST_SRC_HOME)/include ;
+BIN_NAME = test1 ;
+BIN_LIBS = -L$(TOP)/lib -lpthread ;
+
+Main $(BIN_NAME) : $(SRCS).c ;
+LINKLIBS on $(BIN_NAME) = $(BIN_LIBS) $(SYS_LIBS) ;

@@ -1,0 +1,18 @@
+SubDir TOP src test1 ;
+
+SubDirHdrs  . ;
+
+LOCAL_LIBS = -L$(TOP)/lib -lpthread $(SYS_LIBS) ;
+LOCAL_DEF = ;
+SYS_CCFLAGS += -I$(TOP)/include ;
+
+SRCS =
+	main
+	; 
+
+Main test1 : $(SRCS).c ;
+
+ObjectCcFlags $(SRCS) : $(SYS_CCFLAGS) $(LOCAL_DEF) ;
+
+LINKLIBS on test1 = $(LOCAL_LIBS) ;
+
