@@ -1,4 +1,4 @@
 SubDir TOP src ;
 
-SubInclude TOP src rwproxy ;
-SubInclude TOP src zcproxy ;
+SubInclude TOP src test1 ;
+SubInclude TOP src test2 ;
